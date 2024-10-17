@@ -7,7 +7,11 @@ function onClick() {
     let daysAway = Math.round(timeDifference / (1000 * 60 * 60 * 24))
     let daysTill = daysAway + 1
 
-    document.getElementById("daysAway").value = `Your trip is in ${daysTill} days!`
+    document.getElementById("daysAway").innerText = daysTill
 }
+// document.addEventListener("DOMContentLoaded", () => {
+//     document.body.style = "color: red; background-color: yellow"
+//     alert("Are you ready for the page to change colors?")
+// })
 
-document.getElementById("submitBtn").addEventListener("click", onClick)
+document.getElementById("submitBtn").addEventListener("click", onClick);
